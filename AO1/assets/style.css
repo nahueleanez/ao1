@@ -1,0 +1,198 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f2f2f2;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: lightblue;
+    color: white;
+    padding: 20px;
+    z-index: 1000;
+}
+
+#container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+#container-menu {
+    position: fixed;
+    left: 0;
+    top: 113px;
+    bottom: 0;
+    width: 239px; /* Ancho fijo del menú */
+    background-color: green;
+    z-index: 999;
+}
+
+#menu {
+    background: green;
+    color: white;
+    padding: 20px;
+}
+
+#titulo-menu {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.opcion-menu {
+    display: block; /* Convertir los enlaces a elementos de bloque */
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.opcion-menu:hover {
+    background-color: #45a049; /* Cambiar el color de fondo al pasar el cursor sobre el enlace */
+}
+
+
+.inicio {
+    margin-top: 200px;
+    padding: 20px;
+    text-align: center;
+}
+
+.inicio-menu {
+    color: white;
+}
+
+.inicio img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container-body {
+    margin-top: 150px;
+    text-align: center;
+    padding: 20px;
+}
+
+.titulo-body {
+    color: #333;
+}
+
+/* Catalogo_Profesionales*/ 
+
+.contacto {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.terapia {
+    margin-top: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 120px;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+table tr:first-child {
+    background-color: #4CAF50; /* Color de fondo */
+    color: white; /* Color del texto */
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+/* Ajustes para que la tabla sea más legible en dispositivos móviles */
+@media screen and (max-width: 600px) {
+    table, tbody, thead, th, td, tr {
+        display: block;
+    }
+
+    th {
+        display: none;
+    }
+
+    td {
+        border: none;
+        border-bottom: 1px solid #ddd;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 10px;
+        font-weight: bold;
+    }
+}
+/* Estilos para la ficha del profesional */
+
+.ficha-profesional {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    z-index: 1;
+}
+
+/* Mostrar la ficha cuando se pasa el mouse sobre la fila */
+tr:hover .ficha-profesional {
+    display: block;
+}
+ormulario */
+h2 {
+    text-align: center;
+    background: green;
+    color: white;
+}
+
+
+
+
+.formulario-turno {
+    text-align: center;
+    color: white;
+}
+
+input,
+textarea {
+    background: white;
+}
+
+button {
+    background: lightblue;
+}
+
